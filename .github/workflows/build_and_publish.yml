@@ -1,0 +1,29 @@
+name: Build and Publish CV
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-20.04
+    steps:
+      - name: Setup repository
+        uses: actions/checkout@v3
+
+      - name: LaTeX compilation
+        uses: dante-ev/latex-action@2021-A
+        with:
+          root_file: main.tex
+          args: -pdf -latexoption=-file-line-error -latexoption=-interaction=nonstopmode -jobname=CV_SavindiWijenayaka
+
+      - name: Upload CV
+        uses: actions/upload-artifact@v3
+        with:
+          name: CV
+          path: CV_SavindiWijenayaka.pdf
+          if-no-files-found: error
