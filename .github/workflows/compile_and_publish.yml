@@ -1,0 +1,50 @@
+name: Compile and publish LaTeX document
+on: 
+  push:
+    branches:
+      - 'main'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  compile_latex:
+    name: Compile latex to pdf
+    runs-on: ubuntu-latest
+    steps:
+      - name: Set up Git repository
+        uses: actions/checkout@v4
+      - name: Compile LaTeX document
+        uses: xu-cheng/latex-action@v3
+        with:
+          root_file: main.tex
+          args: -pdf -file-line-error -halt-on-error -interaction=nonstopmode -jobname=${{ vars.SAVING_FILENAME }}
+      - name: Upload PDF file
+        uses: actions/upload-artifact@v4
+        with:
+          name: latex-pdf
+          path: ${{ vars.SAVING_FILENAME }}.pdf
+          overwrite: true
+  commit_current_repo:
+    name: Add and commit to current repository
+    runs-on: ubuntu-latest
+    needs: compile_latex
+    steps:
+    - name: Checkout main branch
+      uses: actions/checkout@v2
+      with:
+        ref: main
+    - name: Download artifact
+      uses: actions/download-artifact@v4
+      with:
+        name: latex-pdf
+    - name: Test downloaded artifact
+      run: ls -R
+    - name: Add and commit to main
+      run: | 
+        git config --global user.name 'LaTex Workflow Bot'
+        git config --global user.email 'bot@github.io'
+        git add main.pdf
+        git commit -m "Update CV"
+        git push
