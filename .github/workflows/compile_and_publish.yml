@@ -19,12 +19,12 @@ jobs:
         uses: xu-cheng/latex-action@v3
         with:
           root_file: main.tex
-          args: -pdf -file-line-error -halt-on-error -interaction=nonstopmode -jobname=${{ vars.SAVING_FILENAME }}
+          # args: -pdf -file-line-error -halt-on-error -interaction=nonstopmode -jobname=${{ vars.SAVING_FILENAME }}
       - name: Upload PDF file
         uses: actions/upload-artifact@v4
         with:
           name: latex-pdf
-          path: ${{ vars.SAVING_FILENAME }}.pdf
+          path: main.pdf
           overwrite: true
   commit_current_repo:
     name: Add and commit to current repository
