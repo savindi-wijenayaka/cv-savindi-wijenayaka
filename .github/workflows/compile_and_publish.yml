@@ -34,18 +34,18 @@ jobs:
     needs: compile_latex
     steps:
     - name: Checkout main branch
-      uses: actions/checkout@v2
+      uses: actions/checkout@v4
       with:
         ref: main
         path: current-repo
     - name: Checkout main branch
-      uses: actions/checkout@v2
+      uses: actions/checkout@v4
       with:
         repository: savindi-wijenayaka/savindi-wijenayaka.github.io
         ref: main
         path: public-repo
     - name: Checkout main branch
-      uses: actions/checkout@v2
+      uses: actions/checkout@v4
       with:
         repository: savindi-wijenayaka/savindi-wijenayaka-v2.github.io
         token: ${{ secrets.WEBSITE_V2_PRIVATE }}
