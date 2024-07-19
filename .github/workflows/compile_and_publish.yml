@@ -29,6 +29,17 @@ jobs:
           overwrite: true
           if-no-files-found: error
   commit_current_repo:
+    strategy:
+      matrix:
+        repo_details:
+          - name: ${{ github.repository }}
+            path: current-repo
+          - name: savindi-wijenayaka/savindi-wijenayaka.github.io
+            path: public-repo
+          - name: savindi-wijenayaka/savindi-wijenayaka-v2.github.io
+            path: private-repo
+            secret_name: WEBSITE_V2_PRIVATE
+
     name: Add and commit to current repository
     runs-on: ubuntu-latest
     needs: compile_latex
@@ -36,21 +47,11 @@ jobs:
     - name: Checkout main branch
       uses: actions/checkout@v4
       with:
+        repository: ${{ matrix.repo_details.name }}
         ref: main
-        path: current-repo
-    - name: Checkout main branch
-      uses: actions/checkout@v4
-      with:
-        repository: savindi-wijenayaka/savindi-wijenayaka.github.io
-        ref: main
-        path: public-repo
-    - name: Checkout main branch
-      uses: actions/checkout@v4
-      with:
-        repository: savindi-wijenayaka/savindi-wijenayaka-v2.github.io
-        token: ${{ secrets.WEBSITE_V2_PRIVATE }}
-        ref: main
-        path: private-repo
+        path: ${{ matrix.repo_details.path }}
+        if: ${{ matrix.repo_details.secret_name }} 
+        token: ${{ secrets[matrix.repo_details.secret_name] }}
     - name: Download artifact
       uses: actions/download-artifact@v4
       with:
@@ -59,7 +60,7 @@ jobs:
       run: ls -R
     - name: Add and commit to main
       run: | 
-        cd private-repo
+        cd ${{ matrix.repo_details.path }}
         mv $GITHUB_WORKSPACE/${{ vars.SAVING_FILENAME }}.pdf .
         git config --global user.name 'LaTex Workflow Bot'
         git config --global user.email 'bot@github.io'
