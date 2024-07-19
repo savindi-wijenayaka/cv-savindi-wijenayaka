@@ -25,8 +25,9 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: latex-pdf
-          path: main.pdf
+          path: ${{ vars.SAVING_FILENAME }}.pdf
           overwrite: true
+          if-no-files-found: error
   commit_current_repo:
     name: Add and commit to current repository
     runs-on: ubuntu-latest
@@ -46,6 +47,6 @@ jobs:
       run: | 
         git config --global user.name 'LaTex Workflow Bot'
         git config --global user.email 'bot@github.io'
-        git add main.pdf
+        git add ${{ vars.SAVING_FILENAME }}.pdf
         git commit -m "Update CV"
         git push
