@@ -36,22 +36,24 @@ jobs:
             path: current-repo
           - name: savindi-wijenayaka/savindi-wijenayaka.github.io
             path: public-repo
+            secret_name: REPO_WRITE_ACCESS
           - name: savindi-wijenayaka/savindi-wijenayaka-v2.github.io
             path: private-repo
-            secret_name: WEBSITE_V2_PRIVATE
+            secret_name: REPO_WRITE_ACCESS
 
     name: Add and commit to current repository
     runs-on: ubuntu-latest
     needs: compile_latex
     steps:
     - name: Checkout main branch
+      env:
+        repo_token: ${{ (matrix.repo_details.secret_name) && (secrets[matrix.repo_details.secret_name]) || (github.token) }}
       uses: actions/checkout@v4
       with:
         repository: ${{ matrix.repo_details.name }}
         ref: main
         path: ${{ matrix.repo_details.path }}
-        if: ${{ matrix.repo_details.secret_name }} 
-        token: ${{ secrets[matrix.repo_details.secret_name] }}
+        token: ${{ env.repo_token }}
     - name: Download artifact
       uses: actions/download-artifact@v4
       with:
