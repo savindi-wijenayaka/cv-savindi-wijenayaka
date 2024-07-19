@@ -18,8 +18,9 @@ jobs:
       - name: Compile LaTeX document
         uses: xu-cheng/latex-action@v3
         with:
+          pre_compile: "tlmgr update --self && tlmgr update --all"
           root_file: main.tex
-          # args: -pdf -file-line-error -halt-on-error -interaction=nonstopmode -jobname=${{ vars.SAVING_FILENAME }}
+          args: -pdf -file-line-error -halt-on-error -interaction=nonstopmode -jobname=${{ vars.SAVING_FILENAME }}
       - name: Upload PDF file
         uses: actions/upload-artifact@v4
         with:
