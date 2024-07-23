@@ -64,8 +64,8 @@ jobs:
       run: | 
         cd ${{ matrix.repo_details.path }}
         mv $GITHUB_WORKSPACE/${{ vars.SAVING_FILENAME }}.pdf .
-        git config --global user.name 'LaTex Workflow Bot'
-        git config --global user.email 'bot@github.io'
+        git config --global user.name 'workflow-bot'
+        git config --global user.email 'workflow-bot@savindi-wijenayaka.github.io'
         git add ${{ vars.SAVING_FILENAME }}.pdf
         git commit -m "Update CV"
         git push
