@@ -41,7 +41,7 @@ jobs:
             path: private-repo
             secret_name: REPO_WRITE_ACCESS
 
-    name: Add and commit to current repository
+    name: Add and commit to the given repository
     runs-on: ubuntu-latest
     needs: compile_latex
     steps:
