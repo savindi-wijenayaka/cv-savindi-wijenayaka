@@ -1,18 +1,20 @@
-\documentclass[10pt,a4paper,ragged2e,withhyper]{altacv}
+\documentclass[12pt,a4paper,withhyper]{altacv}
+% \justifying
 
 %% AltaCV uses the fontawesome5 and academicons fonts
 %% and packages.
 %% See http://texdoc.net/pkg/fontawesome5 and http://texdoc.net/pkg/academicons for full list of symbols. You MUST compile with XeLaTeX or LuaLaTeX if you want to use academicons.
-
+% 2.54 cm
 % Change the page layout if you need to
-\geometry{left=1.25cm,right=1.25cm,top=1.5cm,bottom=1.5cm,columnsep=1.2cm}
+\geometry{left=2cm,right=1.75cm,top=1.75cm,bottom=1.75cm}
 
 \sloppy
-\hyphenpenalty=10000
+% \hyphenpenalty=100
+% \usepackage[none]{hyphenat}
 
 % The paracol package lets you typeset columns of text in parallel
-\usepackage{paracol}
-\usepackage{setspace}
+% \usepackage{paracol}
+% \usepackage{setspace}
 
 % Change the font if you want to, depending on whether
 % you're using pdflatex or xelatex/lualatex
@@ -89,15 +91,15 @@
 
 \cvsection{Summary}
 
-A Machine Learning Engineer and a Researcher with 2+ years of experience in applied machine learning research and production-grade cloud-native application development. Currently working towards a Ph.D. in Bioengineering to contribute to the advancement of healthcare with the aid of Artificial Intelligence (AI). Seeing someone's face light up with a smile due to a product I helped create brings me ultimate satisfaction as an AI and tech enthusiast.
+Machine Learning Engineer and Researcher with over two years of experience in applied deep learning and developing scalable, production-grade cloud-native applications. PhD in Bioengineering, currently under examination, with over three years of interdisciplinary research combining medical imaging, computational quantification, and deep learning-based analysis. Driven by a passion for building AI solutions with real-world impact and committed to bridging the gap between research and application.
 
 \medskip
 
 \cvsection{Education}
 
-\cvevent{Ph.D. in Bioengineering}{University of Auckland}{Dec 2021 - Present}{Auckland, New Zealand}   
+\cvevent{Ph.D. in Bioengineering \small{(under examination)}}{University of Auckland}{Dec 2021 - May 2025}{Auckland, New Zealand}   
 \begin{itemize}
-    \item Analyzed gastric microstructures using an interdisciplinary approach integrating micro-CT imaging, mathematics, and deep learning, advancing the understanding of healthy stomachs.
+    \item Analysed gastric microstructures using an interdisciplinary approach integrating micro-CT imaging, mathematics, computational anatomy, and deep learning, advancing the understanding of healthy stomachs.
     \item Engineered a semantic segmentation model to distinguish gastric tissue layers, integrating multiscale channel and spatial attention concepts, implementing numerous ablation studies, and saving over 40 hours per dataset.
     \item Developed a robust three-dimensional gastric tissue quantification framework using advanced mathematical techniques in Python; delivered precise measurements from 20+ tissue samples, establishing the first benchmark for future research.
     \item Developed a comprehensive computational model compiling crucial geometric information alongside quantification details sourced from 8 distinct experiments, enabling future in-silico experiments.
@@ -118,15 +120,15 @@ A Machine Learning Engineer and a Researcher with 2+ years of experience in appl
 
 \cvevent{Machine Learning Engineer}{\href{http://www.wso2.com}{WSO2}}{Sept 2020 - Nov 2021}{Colombo, Sri Lanka}   % chktex 8
 \begin{itemize}
-    \item WSO2 is one of the world's leading open-source integration vendors. Choreo is its latest product providing an AI-enhanced integrated platform as a service. 
+    \item WSO2 is one of the world's leading open-source integration vendors. Choreo is its latest product, providing an AI-enhanced integrated platform as a service. 
     \item Researched, engineered and deployed the initial phase of Choreo's AI-assisted testing feature, using Python, Keras, Flask, Kubernetes and Azure DevOps pipelines.
     \item Architected, developed and deployed Choreo’s AI-based anomaly detector with two other engineers, using Azure solutions, Ballerina, and Python, while adhering to security best practices, scaling requirements, and optimised resource usage.
     \item Analysed Ballerina Language Server performance and identified the cause of a memory leak using JMeter and Eclipse Memory Analyser (MAT), which helped in the optimisation of resources in Choreo.
     \item Contributed to automating the performance testing of Choreo by creating a library and a pipeline for system metrics collection using Python, Kusto, Seaborn, and Azure DevOps pipelines.
 \end{itemize}
 
-\divider{}
-
+% \divider{}
+\clearpage
 \cvevent{Software Research Engineer (Intern)}{\href{https://www.pearson.com/}{Pearson}}{Sept 2018 - Sept 2019}{Colombo, Sri Lanka}   % chktex 8
 \begin{itemize}
     \item Pearson is a leading Education provider, offering curriculum materials, multimedia learning tools, and testing programs to help educate people worldwide.
@@ -137,14 +139,14 @@ A Machine Learning Engineer and a Researcher with 2+ years of experience in appl
 
 \medskip
 
-% \pagebreak
-\cvsection{Certifications}
+% % \pagebreak
+% \cvsection{Certifications}
 
-\begin{itemize}
-    \item \cvevent{AI for Medical Diagnosis}{DeepLearning.AI}{May 2021}{}
-    \item \cvevent{Deep Learning Specialisation}{DeepLearning.AI}{Dec 2020}{}
-    \item \cvevent{TensorFlow Developer Specialisation}{DeepLearning.AI}{July 2020}{}
-\end{itemize}
+% \begin{itemize}
+%     \item \cvevent{AI for Medical Diagnosis}{DeepLearning.AI}{May 2021}{}
+%     \item \cvevent{Deep Learning Specialisation}{DeepLearning.AI}{Dec 2020}{}
+%     \item \cvevent{TensorFlow Developer Specialisation}{DeepLearning.AI}{July 2020}{}
+% \end{itemize}
 
 \medskip
 
@@ -153,26 +155,32 @@ A Machine Learning Engineer and a Researcher with 2+ years of experience in appl
 \begin{itemize}
     \item \textbf{Knowledge Areas } --- Deep learning (Vision \& NLP)
     \item \textbf{Programming languages} --- Python, Ballerina, Java SE, Bash
-    \item \textbf{Frameworks and tools} --- Flask, TensorFlow, Numpy, Pandas, Keras, Springboot, Git, Agile
-    \item \textbf{DevOps} --- Linux, Azure, Kubernetes, Docker, Kustomize, JMeter
+    \item \textbf{Frameworks and tools} --- Flask, Pytorch, Keras, Numpy, Pandas, Springboot, Git, Agile
+    \item \textbf{DevOps} --- Linux, Azure, Kubernetes, Docker, Kustomize, AWS, JMeter
 \end{itemize}
 
 \medskip
 
 \cvsection{Achievements}
 \begin{itemize}
-    \item Awarded as the 1st place team in SPARC FAIR codeathon 2022 organized jointly by SPARC Data and Resource Center and National Institutes of Health (NIH).
-    \item Placements in Dean’s List in all four academic years of B.Sc.
-    \item Awarded black belt in Karate.
-    \item Member (2016-2018) and women's team captain (2018) in the University of Kelaniya Karate team, winning national and inter-university medals with merits. 
-    \item Lead the Marketing and Communication function of AIESEC in University of Kelaniya as the vice president (2018) to increase the growth rate.
-    \item Managed the financial and budgeting aspects as the organising committee finance lead in RealHack 2019 inter-university hackathon.
-    \item Awarded as the 4th Place team in the DataStorm 2020 datathon organised by Octave (JKH Centre of Excellence for Big Data Analytics) and University of Moratuwa.
-    \item Became the 1st Runner Up team in National Youth Software Competition 2017 organised by UNDP-Sri Lanka.
-    \item Achieved the Gold medal for Chess in Four Nations Championship 2019 organized by Pearson.
-    \item Represented secondary school at the national level for Karate, Carrom, Kabbadi and as an Army Cadet.
-    \item Held various leadership positions in the secondary school as a junior prefect, senior prefect and Karate captain.
+    % Technical / Academic
+    \item \textbf{1st Place (2022)} and \textbf{2nd Place (2024)} – SPARC FAIR Codeathon, organised by SPARC Data and Resource Centre and the NIH.
+    \item \textbf{4th Place} – DataStorm 2020 Datathon, organised by Octave (JKH) and University of Moratuwa.
+    \item \textbf{1st Runner-Up} – National Youth Software Competition 2017, organised by UNDP Sri Lanka.
+    \item \textbf{Dean’s List Honouree} – Recognised in all four academic years of the B.Sc. programme.
+
+    % Leadership & Management
+    \item \textbf{Vice President} – Marketing \& Communications at AIESEC in the University of Kelaniya in 2018, contributing to local chapter growth.
+
+    % Sports & Extracurricular
+    \item \textbf{National University Colours} recipient, \textbf{Black Belter} and \textbf{Women's Captain} in University Karate Team; won multiple national and inter-university medals (2016–2018).
+
+    \item \textbf{Gold Medalist} – Chess, Four Nations Championship 2019, organised by Pearson.
+    \item Represented school at the national level in Karate, Carrom, Kabaddi, and Army Cadet competitions, while also serving as Junior Prefect, Senior Prefect, and Karate Captain.
+
 \end{itemize}
+
+
 
 \medskip
 
@@ -189,6 +197,10 @@ A Machine Learning Engineer and a Researcher with 2+ years of experience in appl
 
 \cvskill{English}{4}
 \cvskill{Sinhala}{5}
+
+\medskip
+\cvsection{References}
+Available upon request
 
 % \vfill
 % \begin{flushright}
