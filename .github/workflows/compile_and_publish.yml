@@ -63,7 +63,7 @@ jobs:
     - name: Add and commit to main
       run: | 
         cd ${{ matrix.repo_details.path }}
-        mv $GITHUB_WORKSPACE/public/${{ vars.SAVING_FILENAME }}.pdf .
+        mv $GITHUB_WORKSPACE/${{ vars.SAVING_FILENAME }}.pdf public/
         git config --global user.name 'workflow-bot'
         git config --global user.email 'workflow-bot@savindi-wijenayaka.github.io'
         git add public/${{ vars.SAVING_FILENAME }}.pdf
