@@ -289,7 +289,7 @@
 \newcommand{\cvevent}[4]{
   {\large\color{emphasis}#1\par}
   \smallskip\normalsize
-  \ifstrequal{#2}{}{}{\small\makebox[0.2\linewidth][l]{\textbf{\color{accent}#2}}}
+  \ifstrequal{#2}{}{}{\small\makebox[0.3\linewidth][l]{\textbf{\color{accent}#2}}}
   \ifstrequal{#3}{}{}{\small\makebox[0.3\linewidth][l]{\faCalendar*~#3}}
   \ifstrequal{#4}{}{}{\small\makebox[0.3\linewidth][l]{\faMapMarker*~#4}}\par
   \medskip\normalsize
