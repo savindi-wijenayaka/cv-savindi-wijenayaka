@@ -67,5 +67,5 @@ jobs:
         git config --global user.name 'workflow-bot'
         git config --global user.email 'workflow-bot@savindi-wijenayaka.github.io'
         git add public/${{ vars.SAVING_FILENAME }}.pdf
-        git commit -m "Update CV"
+        git commit -m "Update CV for MLE"
         git push
