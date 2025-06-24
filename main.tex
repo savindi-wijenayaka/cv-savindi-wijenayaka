@@ -83,7 +83,7 @@
 
 \cvsection{Summary}
 
-Machine Learning Engineer and Researcher with over two years of experience in applied deep learning and developing scalable, production-grade cloud-native applications. PhD in Bioengineering, currently under examination, with over three years of interdisciplinary research combining medical imaging, computational quantification, and deep learning-based analysis. Driven by a passion for building AI solutions with real-world impact and committed to bridging the gap between research and application.
+Machine Learning Engineer and Researcher with 2+ years of industry experience developing and deploying scalable deep learning systems in cloud-native environments. PhD (under examination) from the University of Auckland, with research spanning medical imaging, deep learning, applied mathematics, and computational analysis. Brings 6+ years of experience in Python, along with extensive work across modern ML frameworks, containerisation, orchestration, and CI/CD pipelines. Focused on translating research into robust, real-world AI solutions.
 
 \medskip
 
@@ -93,10 +93,10 @@ Machine Learning Engineer and Researcher with over two years of experience in ap
 WSO2 is one of the world's leading open-source integration vendors. Choreo is its latest product, providing an AI-enhanced integrated platform as a service.
 \medskip
 \begin{itemize} 
-    \item Researched, engineered and deployed the initial phase of Choreo's AI-assisted testing feature, using Python, Keras, Flask, Kubernetes and Azure DevOps pipelines.
-    \item Architected, developed and deployed Choreo’s AI-based anomaly detector with two other engineers, using Azure solutions, Ballerina, and Python, while adhering to security best practices, scaling requirements, and optimised resource usage.
+    \item Researched, developed, and deployed phase 1 of Choreo’s AI Test Assistant service end-to-end, including dataset creation via XML/OpenAPI scraping, iterative hypothesis testing, and model development using Python, Keras, and GPT-based experimentation for natural language understanding. Built the infrastructure with Flask, Docker, Kubernetes, and Azure, incorporating CI/CD, unit tests, and OpenAPI compliance.
+    \item Co-architected and implemented Choreo’s AI Anomaly Detection system using Azure Stream Analytics, Event Hubs, SQL, and Function Apps; led the design of the alerting pipeline, including suppression policies and metric correlation.
+    \item Automated Choreo’s performance testing by building a Python library and Azure DevOps pipeline for system metrics collection and analysis, improving observability, and supporting data collection for ML models.
     \item Diagnosed and resolved a critical memory leak in the Ballerina Language Server using JMeter and Eclipse Memory Analyser (MAT), which helped in the optimisation of resources in Choreo.
-    \item Contributed to automating the performance testing of Choreo by creating a library and a pipeline for system metrics collection using Python, Kusto Query Language (KQL), Seaborn, and Azure DevOps pipelines.
 \end{itemize}
 
 \divider{}
@@ -105,9 +105,14 @@ WSO2 is one of the world's leading open-source integration vendors. Choreo is it
 Pearson is a leading Education provider, offering curriculum materials, multimedia learning tools, and testing programs to help educate people worldwide.
 \medskip
 \begin{itemize}
-    \item Collaborated with two other engineers to create the minimum viable product of AI-based Public Speaking Evaluator Service (APSES) while contributing to emotion detection and speech analysis features, using Python, Keras, OpenCV, Kaldi and Flask.
-    \item Investigated on Question and Answering and built the minimal viable product of a Chatbot, which answers students' questions based on Pearson books and other documentation, using a modified version of the Bi-Directional Attention Flow (BiDAF) model, Python and Django.
-    \item Researched and engineered the minimal viable product which automatically classifies flashcards created by the system or users under available topics, using the Universal Language Model Fine-Tuning (ULMFiT) model, Python and Django.
+    \item Researched and implemented deep learning modules for emotion detection and speech analysis in the AI-based Public Speaking Evaluator Service, using Keras, Kaldi, and OpenCV. Integrated models into RESTful services (Flask, later Django) and automated deployment via Ansible for scalable real-time evaluation.
+
+    \item Examined Question Answering and Machine Comprehension to build a Q\&A chatbot service for Pearson’s educational content, using AllenNLP and BiDAF, later extending it with fine-tuned BERT and GPT-2 models, exposing the service via a Django REST API and automated deployment using Ansible.
+
+    \item Investigated and developed a flashcard classification service using ULMFiT, LSTM, and GRU to automatically categorise flashcards created by students or the system, deployed via Django REST framework.
+
+    \item Evaluated and tested NoSQL and relational database migration strategies (MongoDB, MSSQL, MySQL) and conducted performance testing on ScaleOut State Servers within AWS EC2 environments.
+
 \end{itemize}
 
 \medskip
@@ -115,8 +120,8 @@ Pearson is a leading Education provider, offering curriculum materials, multimed
 \cvsection{Education}
 
 \cvevent{Ph.D. in Bioengineering \small{(under examination)}}{University of Auckland}{Dec 2021 - May 2025}{Auckland, New Zealand}   
+A deep learning centred computational framework was developed for automated 3D gastric microstructure analysis, integrating biomedical imaging, model-based tissue segmentation, and downstream computational quantification to enable scalable, reproducible anatomical assessment and modelling.
 \begin{itemize}
-    \item Analysed gastric microstructures using an interdisciplinary approach integrating micro-CT imaging, mathematics, computational anatomy, and deep learning, advancing the understanding of healthy stomachs.
     \item Engineered a semantic segmentation model to distinguish gastric tissue layers, integrating multiscale channel and spatial attention concepts, implementing numerous ablation studies, and saving over 40 hours per dataset.
     \item Developed a robust three-dimensional gastric tissue quantification framework using advanced mathematical techniques in Python; delivered precise measurements from 20+ tissue samples, establishing the first benchmark for future research.
     \item Developed a comprehensive computational model compiling crucial geometric information alongside quantification details sourced from 8 distinct experiments, enabling future in-silico experiments.
@@ -144,14 +149,23 @@ Pearson is a leading Education provider, offering curriculum materials, multimed
 
 \medskip
 
-\cvsection{Skills}
-
+\cvsection{Technical Skills}
 \begin{itemize}
-    \item \textbf{Knowledge Areas } --- Deep learning (Vision \& NLP)
-    \item \textbf{Programming languages} --- Python, Ballerina, Java SE, Bash
-    \item \textbf{Frameworks and tools} --- Pytorch, Keras, Flask, Django, Numpy, Pandas, Scikit-Learn, Plotly, Seaborn, Springboot, Git, Agile
-    \item \textbf{Data handling} --- SQL, Kusto Query Language (KQL), ADX, DVC, REST, gRPC
-    \item \textbf{DevOps} --- Linux, Azure, Kubernetes, Docker, Kustomize, AWS, JMeter
+    \item \textbf{Knowledge Areas:} Deep Learning (Computer Vision \& Natural Language Processing)
+    \item \textbf{Languages \& Frameworks:} Python (Pytorch, Keras, Flask, Django), Java (Spring Boot), Ballerina, Bash
+    \item \textbf{Backend \& APIs:} RESTful APIs, gRPC, Event-Driven Integration
+    \item \textbf{Databases \& Data Handling:} Kusto Query Language (KQL), MongoDB, MSSQL, MySQL, ADX, DVC
+    \item \textbf{Cloud Platforms \& DevOps:} Azure, Kubernetes, Docker, CI/CD, AWS, Ansible, Linux
+    \item \textbf{Tools \& Methodologies:} Git, Agile, Performance Monitoring (Seaborn, Plotly, JMeter), Debugging (Eclipse MAT), Analysis (Numpy, Pandas), Testing (Unittest)
+\end{itemize}
+
+\medskip
+
+\cvsection{Knowledge Sharing \& Technical Outreach}
+\begin{itemize}
+    \item Member of the teaching team for Code In Place 2021, an online Python course offered by Stanford University, contributing to global tech education initiatives.
+    \item Served as a guest speaker for multiple technical webinars (organized by IEEE and DeepLearning.AI), effectively communicating complex deep learning topics to broader audiences.
+    \item  Authored technical articles on Medium covering conceptual topics (CNNs, Kubernetes internals, JVM), practical applications of cloud-native microservices (Kubernetes, Docker, Azure), and automated CI/CD pipelines (GitHub Actions, Azure ARM templates), demonstrating a passion for knowledge sharing.
 \end{itemize}
 
 \medskip
@@ -167,11 +181,11 @@ Pearson is a leading Education provider, offering curriculum materials, multimed
     % Leadership & Management
     \item \textbf{Vice President} of Marketing \& Communications at AIESEC in the University of Kelaniya in 2018, contributing to local chapter growth.
 
-    % Sports & Extracurricular
-    \item \textbf{National University Colours} recipient, \textbf{Black Belt} Karate player and \textbf{Women's Captain} in University Karate Team; won multiple national and inter-university medals (2016–2018).
+    % % Sports & Extracurricular
+    % \item \textbf{National and University Colours} recipient, \textbf{Black Belt} Karate player and \textbf{Women's Captain} in University Karate Team; won multiple national and inter-university medals (2016–2018).
 
-    \item \textbf{Gold Medalist} in Chess at Four Nations Championship 2019, organised by Pearson.
-    \item Represented school at the national level in Karate, Carrom, Kabaddi, and Army Cadet competitions, while also serving as Junior Prefect, Senior Prefect, and Karate Captain.
+    % \item \textbf{Gold Medalist} in Chess at Four Nations Championship 2019, organised by Pearson.
+    % \item Represented school at the national level in Karate, Carrom, Kabaddi, and Army Cadet competitions, while also serving as Junior Prefect, Senior Prefect, and Karate Captain.
 
 \end{itemize}
 
@@ -179,14 +193,7 @@ Pearson is a leading Education provider, offering curriculum materials, multimed
 
 \medskip
 
-\cvsection{Volunteer and Webinar hosting}
-\begin{itemize}
-    \item Member of the teaching team for Code In Place 2021, an online Python course offered by Stanford University during the COVID-19 pandemic. 
-    \item Guest speaker of IEEE Hobnobbers 2021, sharing knowledge on the topic ``A dive into deep learning. ``
-    \item Guest speaker of Pie \& AI Sri Lankan session, organised by DeepLearning.AI, on the topic ``An Introduction to AI and Machine Learning - Sinhala. ``
-\end{itemize}
 
-\medskip
 
 % \cvsection{Languages}
 
