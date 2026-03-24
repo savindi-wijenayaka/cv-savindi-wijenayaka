@@ -62,7 +62,7 @@
 
 \begin{document}
 \name{Savindi Wijenayaka}
-\tagline{Machine Learning Engineer \& Researcher}
+\tagline{Senior Machine Learning Engineer \& Researcher}
 %% You can add multiple photos on the left or right
 % \photoR{3cm}{profile-photo}
 
@@ -83,47 +83,85 @@
 
 \cvsection{Summary}
 
-Machine Learning Engineer and Researcher with 3 years of industry experience developing and deploying scalable deep learning systems in cloud-native environments. Brings 7 years of experience in Python, along with extensive work across modern ML frameworks, containerisation, orchestration, and CI/CD pipelines. PhD from the University of Auckland, with research spanning medical imaging, deep learning, applied mathematics, and computational analysis. Focused on translating research into robust, real-world AI solutions.
+% Machine Learning Engineer and Researcher with 3 years of industry experience developing and deploying scalable deep learning systems in cloud-native environments. Brings 7 years of experience in Python, along with extensive work across modern ML frameworks, containerisation, orchestration, and CI/CD pipelines. PhD from the University of Auckland, with research spanning medical imaging, deep learning, applied mathematics, and computational analysis. Focused on translating research into robust, real-world AI solutions.
+
+Machine Learning Engineer with a PhD and 6+ years of applied ML experience across industry and research, developing and deploying production-grade deep learning systems in cloud-native environments. Brings technical depth across the entire journey from problem framing and dataset construction through model architecture, training, and system design, to production deployment, owning each phase with a focus on business impact, engineering rigour, and data governance. Driven by the challenge of turning rigorous research into systems that create tangible, real-world impact across diverse domains and data types.
+
+\cvsection{Technical Skills}
+\begin{itemize}
+    \item \textbf{ML \& Research:} Computer Vision, NLP, Signal Processing, biological modelling and computational analysis
+    \item \textbf{Languages \& Frameworks:} Python, PyTorch, Keras, Flask, Django, Java, Spring Boot
+    \item \textbf{Data types:} Text, Image, Video, Audio, Time Series, 3D, Point Cloud, Mesh, Tabular
+    \item \textbf{Data \& Cloud Infrastructure:} Azure, AWS, Docker, Kubernetes, Snowflake, Relational (MSSQL), Time series (Azure Data Explorer), Stream data (Azure Stream Analytics), Transact-SQL, Kusto Query Language
+    \item \textbf{Engineering Practices:} Git, GitHub Actions, Azure DevOps Pipelines, REST, gRPC, Agile
+    \item \textbf{AI Tooling:} Claude, Cursor, Antigravity
+\end{itemize}
 
 \medskip
+
+% \cvsection{Technical Skills}
+
+% \begin{itemize}
+%     \item \textbf{Knowledge Areas:} Deep Learning (Computer Vision, Natural Language Processing \& Signal Processing)
+%     \item \textbf{Data types:} Text, Image, Video, Audio, Time series, 3D data, Point cloud, Mesh, Tabular
+%     \item \textbf{Programming languages:} Python, Java
+%     \item \textbf{Cloud Platforms:} Azure, AWS, GCP
+%     \item \textbf{Frameworks:} Pytorch, Keras, Flask, Django, Spring Boot
+%     \item \textbf{Databases \& Data handling:} Relational (MSSQL), time series (Azure Data Explorer), stream data (Azure Stream Analytics), Transact-SQL, Kusto Query Language, Snowflake
+%     \item \textbf{Containerization:} Docker, Kubernetes, Azure Kubernetes Service
+%     \item \textbf{CI/CD tools:} Git, GitHub, GitHub actions, Azure DevOps Pipelines
+%     \item \textbf{API Protocols:} REST, gRPC
+%     \item \textbf{Software Development Methodologies:} Agile
+%     \item \textbf{AI tooling:} Claude, Cursor, Antigravity
+% \end{itemize}
+
+% \medskip
 
 \cvsection{Experience}
 
 \cvevent{Intermediate Machine Learning Engineer}{\href{https://www.auror.co}{Auror} $\cdot$ Full-time}{Sept 2025 - Present}{Auckland, New Zealand} 
 Auror is a retail crime intelligence platform that provides AI-enhanced capabilities to prevent crime.
 \begin{itemize}
-    \item Architected and developed a modular and extendible ML evaluation and fairness reporting framework to accelerate the prospect trial phase; reduced report turnaround by 80\%, shortening the path to technical win.
+    % \item Drove technical stewardship of a production ML system through dependency mapping, infrastructure migration, and model readiness criteria definition, owning the full cycle through to deploying a new model to production.
 
-    \item Optimized Vision-Language Model (VLM) performance by engineering robust prompt strategies to mitigate edge-case failures; ensured production readiness and model reliability for a new Auror feature.
+    \item Drove technical stewardship of a production ML system through dependency mapping, infrastructure migration, and model readiness criteria definition, with a new model currently progressing through staged deployment to production.
+
+    \item Recognised a critical deployment pipeline risk and addressed it by designing and implementing a staged CI/CD release process, establishing a controlled and deliberate release workflow for the team.
+
+    \item Proactively established team-wide engineering and governance standards, introducing agentic coding guidelines across ML repositories and initiating a data licensing analysis to prevent compliance risks, which the team later expanded into a broader data governance framework.
+    
+    \item Architected a modular ML evaluation and fairness reporting framework, accelerating the prospect trial phase and reducing report turnaround by 80\%, shortening the path to technical win.
+
 \end{itemize}
 
 \divider{}
 
 \cvevent{Machine Learning Engineer}{\href{http://www.wso2.com}{WSO2} $\cdot$ Full-time}{Sept 2020 - Nov 2021}{Colombo, Sri Lanka} 
-WSO2 is one of the world's leading open-source integration vendors. Choreo is its latest product, providing an AI-enhanced integrated platform as a service.
+WSO2 is a leading open-source integration vendor; Choreo is its AI-enhanced platform-as-a-service product.
 \medskip
 \begin{itemize} 
+
+    \item Researched and delivered a GPT-based model for automated API test case generation, deployed on Azure Kubernetes Service, reducing testing effort for customers and enabling an AI-assisted developer workflow.
     
-    \item Researched and developed a GPT-based deep learning model, using Python, Flask, and Keras, deployed on Azure Kubernetes Service, for automating test case generation for the APIs developed by customers in Choreo, resulting in a reduction of the customers' manual effort.
+    \item Co-architected a time series-based AI Anomaly Detection system using an event-driven microservices architecture across Azure Stream Analytics, Event Hubs, and Function Apps, enabling customers to detect abnormal application behaviours in real time.
+
+    \item Implemented a regression testing pipeline for the Ballerina Language Server, systematically surfacing performance degradations and resource utilisation issues to ensure production reliability for users.
     
-    \item Co-architected and implemented Choreo’s AI Anomaly Detection system using Azure Stream Analytics, Event Hubs, T-SQL, and Function Apps, integrating microservices via event-driven architecture for secure, scalable cloud deployment, enabling customers to detect abnormal application behaviours early on.
+    \item Diagnosed and resolved a critical memory leak in the Ballerina Language Server, applying systematic profiling with JMeter and Eclipse Memory Analyser, to eliminate server crashes and restore resource efficiency.
     
-    \item Implemented regression tests for detecting performance degradations and resource utilization issues in the Ballerina Language Server in the Choreo Editor, using Python, JMeter, Azure Log Analytics Workspace, and Azure DevOps pipelines, ensuring consistent performance and reliability for users.
-    
-    \item Diagnosed and resolved a critical memory leak in the Ballerina Language Server using JMeter and Eclipse Memory Analyser, which prevented server crashes and improved resource efficiency in the Choreo Editor.
 \end{itemize}
 
-\divider{}
+% \divider{}
 
 \cvevent{Software Research Engineer}{\href{https://www.pearson.com/}{Pearson} $\cdot$ Internship}{Sept 2018 - Sept 2019}{Colombo, Sri Lanka}   % chktex 8
-Pearson is a leading Education provider, offering curriculum materials, multimedia learning tools, and testing programs to help educate people worldwide.
+Pearson is a leading global education provider offering curriculum materials, multimedia learning tools, and testing programs.
 \medskip
 \begin{itemize}
-    \item Researched and implemented deep learning modules for emotion detection and speech analysis in the AI-based Public Speaking Evaluator Service, using Keras, Kaldi, and OpenCV. Integrated models into RESTful services (Flask, later Django) and automated deployment via Ansible for scalable real-time evaluation.
+    \item Researched and implemented deep learning modules for emotion detection and speech analysis, integrating models into scalable RESTful microservices for a real-time AI Public Speaking Evaluator.
 
-    \item Examined Question Answering and Machine Comprehension to build a Q\&A chatbot service for Pearson’s educational content, using AllenNLP and BiDAF, later extending it with fine-tuned BERT and GPT-2 models, exposing the service via a Django REST API and automated deployment using Ansible.
+    \item Researched and built a Q\&A chatbot for Pearson's educational content, iterating from BiDAF to fine-tuned BERT and GPT-2 models to improve answer quality and enable conversational querying of learning material.
 
-    \item Investigated and developed a flashcard classification service using ULMFiT, LSTM, and GRU to automatically categorise flashcards created by students or the system, deployed via Django REST framework.
+    \item Investigated and developed a flashcard classification service using ULMFiT, LSTM, and GRU to automatically categorise flashcards, reducing manual tagging effort and improving content discoverability for students.
 
     % \item Evaluated and tested NoSQL and relational database migration strategies (MongoDB, MSSQL, MySQL) and conducted performance testing on ScaleOut State Servers within AWS EC2 environments.
 
@@ -134,10 +172,10 @@ Pearson is a leading Education provider, offering curriculum materials, multimed
 \cvsection{Education}
 
 \cvevent{Ph.D. in Bioengineering}{University of Auckland}{Dec 2021 - May 2025}{Auckland, New Zealand}   
-A deep learning centred computational framework was developed for automated 3D gastric microstructure analysis, integrating dataset curation, ground truth labelling, semantic segmentation, and downstream 3D computational quantification to enable scalable, reproducible anatomical assessment and modelling.
+Independently conceived and delivered a full-stack deep learning research system for automated 3D biological structure analysis, owning every phase from dataset construction and model architecture to downstream computational pipeline, resulting in a reproducible workflow applied across 20+ distinct biological samples.
 \begin{itemize}
-    \item Engineered a semantic segmentation model integrating multiscale channel and spatial attention mechanisms; conducted extensive ablation studies to optimize architecture, resulting in an automated pipeline that reduced manual analysis time by over 40 hours per dataset.
-    \item Developed a robust Python-based 3D quantification framework and data pipeline, transforming raw micro-CT data into structured geometric benchmarks; standardised the workflow from ground-truth labelling to downstream in-silico modelling across 20+ experimental samples.
+    \item Engineered a semantic segmentation model with multiscale attention mechanisms, conducting extensive ablation studies to optimise architecture and delivering an automated analysis pipeline that reduced manual processing time by 40+ hours per dataset.
+    \item Developed a Python-based 3D quantification framework grounded in advanced mathematical methods, transforming raw micro-CT data into structured geometric benchmarks and standardising the full workflow from ground-truth labelling to downstream modelling and simulation.
 \end{itemize}
 
 \divider{}
@@ -151,28 +189,11 @@ A deep learning centred computational framework was developed for automated 3D g
 
 \medskip
 
-\cvsection{Technical Skills}
-
-\begin{itemize}
-    \item \textbf{Knowledge Areas:} Deep Learning (Computer Vision, Natural Language Processing \& Signal Processing)
-    \item \textbf{Data types:} Text, Image, Video, Audio, Time series, 3D data, Point cloud, Mesh, Tabular
-    \item \textbf{Programming languages:} Python, Java
-    \item \textbf{Cloud Platforms:} Azure, AWS
-    \item \textbf{Frameworks:} Pytorch, Keras, Flask, Django, Spring Boot
-    \item \textbf{Databases \& Data handling:} Relational (MSSQL), time series (Azure Data Explorer), stream data (Azure Stream Analytics), Transact-SQL, Kusto Query Language
-    \item \textbf{Containerization:} Docker, Kubernetes, Azure Kubernetes Service
-    \item \textbf{CI/CD tools:} Git, GitHub, GitHub actions, Azure DevOps Pipelines
-    \item \textbf{API Protocols:} REST, gRPC
-    \item \textbf{Software Development Methodologies:} Agile
-\end{itemize}
-
-\medskip
-
 \cvsection{Knowledge Sharing \& Technical Outreach}
 \begin{itemize}
     \item Member of the teaching team for Code In Place 2021, an online Python course offered by Stanford University, contributing to global tech education initiatives.
-    \item Served as a guest speaker for multiple technical webinars (organized by IEEE and DeepLearning.AI), effectively communicating complex deep learning topics to broader audiences.
-    \item  Authored technical articles on Medium covering conceptual topics (CNNs, Kubernetes internals, JVM), practical applications of cloud-native microservices (Kubernetes, Docker, Azure), and automated CI/CD pipelines (GitHub Actions, Azure ARM templates), demonstrating a passion for knowledge sharing.
+    \item Served as a guest speaker for multiple technical webinars (organised by IEEE and DeepLearning.AI), effectively communicating complex deep learning topics to broader audiences.
+    \item  Authored technical articles on Medium covering conceptual topics (CNNs, Kubernetes internals, JVM), practical applications of cloud-native microservices (Kubernetes, Docker, Azure), and automated CI/CD pipelines (GitHub Actions, Azure ARM templates).
 \end{itemize}
 
 \medskip
