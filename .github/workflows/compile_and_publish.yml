@@ -14,15 +14,15 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Set up Git repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
       - name: Compile LaTeX document
-        uses: xu-cheng/latex-action@v3
+        uses: xu-cheng/latex-action@v4
         with:
           pre_compile: "tlmgr update --self && tlmgr update pdfx"
           root_file: main.tex
           args: -pdf -file-line-error -halt-on-error -interaction=nonstopmode -jobname=${{ vars.SAVING_FILENAME }}
       - name: Upload PDF file
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v6
         with:
           name: latex-pdf
           path: ${{ vars.SAVING_FILENAME }}.pdf
@@ -48,14 +48,14 @@ jobs:
     - name: Checkout main branch
       env:
         repo_token: ${{ (matrix.repo_details.secret_name) && (secrets[matrix.repo_details.secret_name]) || (github.token) }}
-      uses: actions/checkout@v4
+      uses: actions/checkout@v6
       with:
         repository: ${{ matrix.repo_details.name }}
         ref: main
         path: ${{ matrix.repo_details.path }}
         token: ${{ env.repo_token }}
     - name: Download artifact
-      uses: actions/download-artifact@v4
+      uses: actions/download-artifact@v6
       with:
         name: latex-pdf
     - name: Test downloaded artifact
