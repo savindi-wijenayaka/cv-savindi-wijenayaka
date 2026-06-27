@@ -35,6 +35,7 @@
 \ProcessOptions\relax
 
 \LoadClass{article}
+\RequirePackage{xcolor}
 %% v1.3.2 Hopefully this helps make the PDF
 %% file more 'friendly' with copy-paste etc
 \RequirePackage[a-1b]{pdfx}
@@ -378,7 +379,7 @@
 
 \newenvironment{cvcolumn}[1]{\begin{minipage}[t]{#1}\raggedright}{\end{minipage}}
 
-\RequirePackage[style=apa6,sorting=ydnt]{biblatex}
+\RequirePackage[style=apa,sorting=ydnt]{biblatex}
 %% For removing numbering entirely when using a numeric style
 % \setlength{\bibhang}{1em}
 % \DeclareFieldFormat{labelnumberwidth}{\makebox[\bibhang][l]{\itemmarker}}
