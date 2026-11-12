@@ -12,4 +12,6 @@ build/
 *.xmpi
 *.gz
 
-JDs/
+jds/
+assets/
+interview/
